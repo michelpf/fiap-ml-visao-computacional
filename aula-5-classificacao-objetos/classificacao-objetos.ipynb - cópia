@@ -1,0 +1,1088 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Classificação de objetos"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Classificação de objetos utilizando classificador de cascata Harr"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.4.1\n"
+     ]
+    }
+   ],
+   "source": [
+    "import cv2\n",
+    "print(cv2.__version__)\n",
+    "\n",
+    "import numpy as np\n",
+    "\n",
+    "from matplotlib import pyplot as plt\n",
+    "import matplotlib.image as mpimg\n",
+    "\n",
+    "%matplotlib inline\n",
+    "\n",
+    "plt.style.use('seaborn')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Verificando versão instalada do OpenCV"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Carregando um classificador pré-treinado de Haar.\n",
+    "Outros disponíveis em https://github.com/opencv/opencv/tree/master/data/haarcascades."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# Carregando classifcador\n",
+    "face_classifier = cv2.CascadeClassifier('classificadores/haarcascade_frontalface_default.xml')\n",
+    "\n",
+    "image = cv2.imread('imagens/silvio.jpg')\n",
+    "image = cv2.imread('imagens/silvio-filhas.jpg')\n",
+    "image = cv2.imread('imagens/thanos.png')\n",
+    "gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n",
+    "\n",
+    "# Our classifier returns the ROI of the detected face as a tuple\n",
+    "# It stores the top left coordinate and the bottom right coordiantes\n",
+    "# Retornará a região de interesse da face identificada como tupla, armazenando as coordenadas superiores esquerda e inferior \n",
+    "# direita.\n",
+    "# Se retornar vazio é por que não há faces identificadas.\n",
+    "# Os valores padrão são configurações inciais recomendadas \n",
+    "# (cv.HaarDetectObjects(image, cascade, storage, scale_factor=1.1, min_neighbors=3, flags=0, min_size=(0, 0)))\n",
+    "faces = face_classifier.detectMultiScale(gray, 1.3, 5)\n",
+    "\n",
+    "# When no faces detected, face_classifier returns and empty tuple\n",
+    "if faces is ():\n",
+    "     cv2.putText(image, \"Rosto ausente\", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 6)\n",
+    "    \n",
+    "\n",
+    "# Desenhando retângulos nos rostos identificados\n",
+    "for (x,y,w,h) in faces:\n",
+    "    cv2.rectangle(image, (x,y), (x+w,y+h), (127,0,255), 2)\n",
+    "\n",
+    "cv2.imwrite(image, \"imagens/imagem_output_)\n",
+    "    \n",
+    "cv2.waitKey(0)    \n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Construindo funções para utilizar em capturas de vídeo."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def identificar_rosto(imagem):\n",
+    "    face_classifier = cv2.CascadeClassifier('classificadores/haarcascade_frontalface_default.xml')\n",
+    "\n",
+    "    gray = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)\n",
+    "    faces = face_classifier.detectMultiScale(gray, 1.3, 5)\n",
+    "\n",
+    "    if faces is ():\n",
+    "         cv2.putText(imagem, \"Rosto ausente\", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 6)\n",
+    "\n",
+    "    for (x,y,w,h) in faces:\n",
+    "        cv2.rectangle(imagem, (x,y), (x+w,y+h), (127,0,255), 2)\n",
+    "\n",
+    "    return imagem"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Neste caso, o classifciador de sorriso depende inicialmente de localizarmos um rosto e definir o tamanho mínimo de captura. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def identificar_bola(imagem):\n",
+    "    ball_classifier = cv2.CascadeClassifier('ball/classifier/cascade.xml')\n",
+    "  \n",
+    "    gray = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)\n",
+    "    balls = ball_classifier.detectMultiScale(gray, 1.3, 3)\n",
+    "\n",
+    "    for (x,y,w,h) in balls:\n",
+    "        roi = imagem[y:y+h, x:x+w]\n",
+    "        area = int(w) * int(h)\n",
+    "        if area > 1500:\n",
+    "            cv2.rectangle(imagem, (x,y), (x+w,y+h), (127,0,255), 2)\n",
+    "            cv2.putText(imagem, \"BOLA\", (x,y-20), cv2.FONT_HERSHEY_PLAIN, 2, (0,0,255), 1)\n",
+    "        \n",
+    "    return imagem"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#cam_capture.release()\n",
+    "    \n",
+    "cam_capture = cv2.VideoCapture(0)\n",
+    "cv2.destroyAllWindows()\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        image_frame = identificar_rosto(image_frame)\n",
+    "        #image_frame = identificar_sorriso(image_frame)\n",
+    "        cv2.imshow(\"Detector de Rostos\", image_frame)\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "As imagens para as etapas de treino podem ser baixadas em http://www.dis.uniroma1.it/~labrococo/?q=node/459. O treinamento pode ser feito utilizando um software em Windows http://amin-ahmadi.com/cascade-trainer-gui/."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "import time\n",
+    "\n",
+    "cam_capture = cv2.VideoCapture(\"videos/soccer.avi\")\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        image_frame = identificar_bola(image_frame)\n",
+    "        cv2.imshow(\"Identificar bolas\", image_frame)\n",
+    "\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def identificar_bodies(imagem):\n",
+    "    body_classifier = cv2.CascadeClassifier('classificadores/haarcascade_fullbody.xml')\n",
+    "  \n",
+    "    gray = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)\n",
+    "    bodies = body_classifier.detectMultiScale(gray, 1.2, 3)\n",
+    "\n",
+    "    for (x,y,w,h) in bodies:\n",
+    "        roi = imagem[y:y+h, x:x+w]\n",
+    "        area = int(w) * int(h)\n",
+    "        cv2.rectangle(imagem, (x,y), (x+w,y+h), (127,0,255), 2)\n",
+    "        cv2.putText(imagem, \"PEDESTRE\", (x,y-20), cv2.FONT_HERSHEY_PLAIN, 2, (0,0,255), 1)\n",
+    "        \n",
+    "    return imagem"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def identificar_carros(imagem):\n",
+    "    cars_classifier = cv2.CascadeClassifier('classificadores/haarcascade_car.xml')\n",
+    "  \n",
+    "    gray = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)\n",
+    "    cars = cars_classifier.detectMultiScale(gray, 1.2, 3)\n",
+    "\n",
+    "    for (x,y,w,h) in cars:\n",
+    "        roi = imagem[y:y+h, x:x+w]\n",
+    "        area = int(w) * int(h)\n",
+    "        cv2.rectangle(imagem, (x,y), (x+w,y+h), (127,0,255), 2)\n",
+    "        cv2.putText(imagem, \"CARRO\", (x,y-20), cv2.FONT_HERSHEY_PLAIN, 2, (0,0,255), 1)\n",
+    "        \n",
+    "    return imagem"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "cam_capture = cv2.VideoCapture(\"videos/walking.avi\")\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        image_frame = identificar_bodies(image_frame)\n",
+    "        cv2.imshow(\"Identificar bolas\", image_frame)\n",
+    "\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "cam_capture = cv2.VideoCapture(\"videos/cars.avi\")\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        image_frame = identificar_carros(image_frame)\n",
+    "        cv2.imshow(\"Identificar bolas\", image_frame)\n",
+    "\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Identificação de Faces"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A instalção do Dlib em Windows ficou integrada com este repositório \n",
+    "```conda install -c conda-forge dlib```\n",
+    "Evite seguir outros tutoriais pois envolve um método antigo e complexo de compilação de bibliotecas em C e instalações separadas.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Os modelos podem ser baixados neste endereço http://dlib.net/files/."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "import dlib\n",
+    "import numpy \n",
+    "\n",
+    "predictor_68_path = \"modelos/shape_predictor_68_face_landmarks.dat\"\n",
+    "predictor_5_path = \"modelos/shape_predictor_5_face_landmarks.dat\"\n",
+    "\n",
+    "predictor = dlib.shape_predictor(predictor_68_path)\n",
+    "detector = dlib.get_frontal_face_detector()\n",
+    "\n",
+    "\n",
+    "def get_landmarks(im):\n",
+    "    rects = detector(im, 1)\n",
+    "\n",
+    "    if len(rects) > 1:\n",
+    "        raise Exception(\"Encontrado mais de uma face\")\n",
+    "    if len(rects) == 0:\n",
+    "        raise Exception(\"Sem face\")\n",
+    "\n",
+    "    return numpy.matrix([[p.x, p.y] for p in predictor(im, rects[0]).parts()])\n",
+    "\n",
+    "def annotate_landmarks(im, landmarks):\n",
+    "    im = im.copy()\n",
+    "    for idx, point in enumerate(landmarks):\n",
+    "        pos = (point[0, 0], point[0, 1])\n",
+    "        cv2.putText(im, str(idx), pos,\n",
+    "                    fontFace=cv2.FONT_HERSHEY_SCRIPT_SIMPLEX,\n",
+    "                    fontScale=0.4,\n",
+    "                    \n",
+    "                    color=(0, 0, 255))\n",
+    "        cv2.circle(im, pos, 3, color=(0, 255, 255))\n",
+    "    return im\n",
+    "\n",
+    "def get_landmarks_multiple(im):\n",
+    "    rects = detector(im, 1)\n",
+    "\n",
+    "    landmarks = []\n",
+    "    \n",
+    "    \n",
+    "    for rect in rects:\n",
+    "        landmarks.append(numpy.matrix([[p.x, p.y] for p in predictor(im, rect).parts()]))\n",
+    "\n",
+    "    return landmarks\n",
+    "\n",
+    "def annotate_landmarks_multiple(im, landmarks):\n",
+    "    im = im.copy()\n",
+    "    \n",
+    "    for landmark in landmarks:\n",
+    "        for idx, point in enumerate(landmark):\n",
+    "            pos = (point[0, 0], point[0, 1])\n",
+    "            cv2.putText(im, str(idx), pos,\n",
+    "                        fontFace=cv2.FONT_HERSHEY_SCRIPT_SIMPLEX,\n",
+    "                        fontScale=0.4,\n",
+    "\n",
+    "                        color=(0, 0, 255))\n",
+    "            cv2.circle(im, pos, 3, color=(0, 255, 255))\n",
+    "    return im\n",
+    "\n",
+    "image = cv2.imread('imagens/silvio.jpg')\n",
+    "landmarks = get_landmarks_multiple(image)\n",
+    "image_with_landmarks = annotate_landmarks_multiple(image, landmarks)\n",
+    "\n",
+    "cv2.imshow('Result', image_with_landmarks)\n",
+    "cv2.imwrite('imagens/silvio_landmarks.jpg',image_with_landmarks)\n",
+    "cv2.waitKey(0)\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#cam_capture.release()\n",
+    "    \n",
+    "cam_capture = cv2.VideoCapture(0)\n",
+    "cv2.destroyAllWindows()\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        landmarks = get_landmarks_multiple(image_frame)\n",
+    "        image_with_landmarks = annotate_landmarks_multiple(image_frame, landmarks)\n",
+    "        cv2.imshow(\"Detector de Rostos\", image_with_landmarks)\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Lista de pontos de interesse da região da face, considerando detector de 68 pontos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "FACE_POINTS = list(range(17, 68))\n",
+    "MOUTH_POINTS = list(range(48, 61))\n",
+    "RIGHT_BROW_POINTS = list(range(17, 22))\n",
+    "LEFT_BROW_POINTS = list(range(22, 27))\n",
+    "RIGHT_EYE_POINTS = list(range(36, 42))\n",
+    "LEFT_EYE_POINTS = list(range(42, 48))\n",
+    "NOSE_POINTS = list(range(27, 35))\n",
+    "JAW_POINTS = list(range(0, 17))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Função de anotação mais veloz, considerando o classificador de 5 pontos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "predictor_fast = dlib.shape_predictor(predictor_5_path)\n",
+    "detector = dlib.get_frontal_face_detector()\n",
+    "\n",
+    "def annotate_landmarks_image_fast(im):\n",
+    "    im = im.copy()\n",
+    "    \n",
+    "    rects = detector(im, 1)\n",
+    "    \n",
+    "    if len(rects) == 0:\n",
+    "        return im\n",
+    "    \n",
+    "    for rect in rects:\n",
+    "        landmarks = numpy.matrix([[p.x, p.y] for p in predictor_fast(im, rect).parts()])\n",
+    "\n",
+    "        for k, d in enumerate(rects):\n",
+    "            cv2.rectangle(im, (d.left(), d.top()), (d.right(), d.bottom()), (255, 0, 255), 2)\n",
+    "            \n",
+    "            for idx, point in enumerate(landmarks):\n",
+    "                pos = (point[0, 0], point[0, 1])\n",
+    "                cv2.circle(im, pos, 1, color=(0, 255, 0))\n",
+    "        \n",
+    "    return im"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Função de anotação de landmarks, retornará uma imagem com cada ponto centrado em um círculo."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def annotate_landmarks_image(im):\n",
+    "    im = im.copy()\n",
+    "    rects = detector(im, 1)\n",
+    "    \n",
+    "    if len(rects) > 1:\n",
+    "        return im\n",
+    "    if len(rects) == 0:\n",
+    "        return im\n",
+    "    \n",
+    "    landmarks = numpy.matrix([[p.x, p.y] for p in predictor(im, rects[0]).parts()])\n",
+    "    for idx, point in enumerate(landmarks):\n",
+    "        pos = (point[0, 0], point[0, 1])\n",
+    "        cv2.circle(im, pos, 1, color=(0, 255, 0))\n",
+    "        \n",
+    "    return im"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Função para criar polígonos a partir dos pontos de identificação. Estes polígonos podem oferecer ferramentas como cálculo de área para identificação melhor das estruturas faciais, como piscadas, movimentação da boca, dentre outros."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def annotate_landmarks_convex_hull_image(im):\n",
+    "    im = im.copy()\n",
+    "    rects = detector(im, 1)\n",
+    "    \n",
+    "    if len(rects) == 0:\n",
+    "        return im\n",
+    "    \n",
+    "    landmarks_list = []\n",
+    "    \n",
+    "    for rect in rects:\n",
+    "        landmarks = numpy.matrix([[p.x, p.y] for p in predictor(im, rect).parts()])\n",
+    "\n",
+    "        for k, d in enumerate(rects):\n",
+    "            cv2.rectangle(im, (d.left(), d.top()), (d.right(), d.bottom()), (255, 0, 255), 2)\n",
+    "\n",
+    "            points = cv2.convexHull(landmarks[NOSE_POINTS])\n",
+    "            cv2.drawContours(im, [points], 0, (0, 255, 0), 2)\n",
+    "\n",
+    "            points = cv2.convexHull(landmarks[MOUTH_POINTS])\n",
+    "            cv2.drawContours(im, [points], 0, (0, 255, 0), 2)\n",
+    "\n",
+    "            area_boca = cv2.contourArea(points)   \n",
+    "            cv2.putText(im, \"Boca \"+str(area_boca), (d.left(),d.top()-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)\n",
+    "            \n",
+    "            points = cv2.convexHull(landmarks[RIGHT_BROW_POINTS])\n",
+    "            cv2.drawContours(im, [points], 0, (0, 255, 0), 2)\n",
+    "\n",
+    "            points = cv2.convexHull(landmarks[LEFT_BROW_POINTS])\n",
+    "            cv2.drawContours(im, [points], 0, (0, 255, 0), 2)\n",
+    "\n",
+    "            points = cv2.convexHull(landmarks[RIGHT_EYE_POINTS])\n",
+    "            cv2.drawContours(im, [points], 0, (0, 255, 0), 2)\n",
+    "\n",
+    "            eye_aspect = eye_aspect_ratio(landmarks[RIGHT_EYE_POINTS])\n",
+    "            cv2.putText(im, \"Olho Direito \"+str(eye_aspect), (d.left(),d.top()-30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)\n",
+    "\n",
+    "            eye_aspect = eye_aspect_ratio(landmarks[LEFT_EYE_POINTS])\n",
+    "            cv2.putText(im, \"Olho Esquerdo \"+str(eye_aspect), (d.left(),d.top()-50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)\n",
+    "\n",
+    "            points = cv2.convexHull(landmarks[LEFT_EYE_POINTS])\n",
+    "            cv2.drawContours(im, [points], 0, (0, 255, 0), 2)\n",
+    "\n",
+    "    return im"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Função para cálculo do EAR, razão de aspecto dos olhos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "from scipy.spatial import distance as dist\n",
+    "\n",
+    "def eye_aspect_ratio(eye):\n",
+    "    # compute the euclidean distances between the two sets of\n",
+    "    # vertical eye landmarks (x, y)-coordinates\n",
+    "    a = dist.euclidean(eye[1], eye[5])\n",
+    "    b = dist.euclidean(eye[2], eye[4])\n",
+    " \n",
+    "    # compute the euclidean distance between the horizontal\n",
+    "    # eye landmark (x, y)-coordinates\n",
+    "    c = dist.euclidean(eye[0], eye[3])\n",
+    " \n",
+    "    # compute the eye aspect ratio\n",
+    "    ear = (a + b) / (2.0 * c)\n",
+    " \n",
+    "    # return the eye aspect ratio\n",
+    "    return ear"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Função para anotar os detalhes dos olhos com base na função de cálculo de aspecto de razão."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def annotate_eye_image(im):\n",
+    "    im = im.copy()\n",
+    "    rects = detector(im, 1)\n",
+    "    \n",
+    "    if len(rects) == 0:\n",
+    "        return im\n",
+    "    \n",
+    "    landmarks_list = []\n",
+    "    \n",
+    "    for rect in rects:\n",
+    "        landmarks = numpy.matrix([[p.x, p.y] for p in predictor(im, rect).parts()])\n",
+    "\n",
+    "        for k, d in enumerate(rects):\n",
+    "            cv2.rectangle(im, (d.left(), d.top()), (d.right(), d.bottom()), (255, 0, 255), 2)\n",
+    "\n",
+    "            eye_aspect = eye_aspect_ratio(landmarks[RIGHT_EYE_POINTS])\n",
+    "            cv2.putText(im, \"Olho Direito \"+str(eye_aspect), (d.left(),d.top()-20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 1)\n",
+    "\n",
+    "            eye_aspect = eye_aspect_ratio(landmarks[LEFT_EYE_POINTS])\n",
+    "            cv2.putText(im, \"Olho Esquerdo \"+str(eye_aspect), (d.left(),d.top()-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 1)\n",
+    "\n",
+    "    return im"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Testes com webcam para identificação de informações sobre os olhos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "image = cv2.imread('imagens/cervero.jpeg')\n",
+    "image_annotated = annotate_eye_image(image)\n",
+    "\n",
+    "cv2.imshow('Result', image_annotated)\n",
+    "cv2.waitKey(0)\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Extração de informações de outras regiões."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "image = cv2.imread('imagens/cervero.jpeg')\n",
+    "image_annotated = annotate_landmarks_convex_hull_image(image)\n",
+    "\n",
+    "cv2.imshow('Result', image_annotated)\n",
+    "cv2.waitKey(0)\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "cam_capture.release()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#cam_capture.release()\n",
+    "    \n",
+    "cam_capture = cv2.VideoCapture(0)\n",
+    "cv2.destroyAllWindows()\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        image_frame =  annotate_landmarks_convex_hull_image(image)\n",
+    "        cv2.imshow(\"Detector de Aspecto dos Olhos\", image_frame)\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Testes com webcam para identificaçao de informações da face utilizando polígonos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#cam_capture.release()\n",
+    "    \n",
+    "cam_capture = cv2.VideoCapture(0)\n",
+    "cv2.destroyAllWindows()\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        image_frame = annotate_landmarks_convex_hull_image(image_frame)\n",
+    "        cv2.imshow(\"Detector de Rostos com Poligonos\", image_frame)\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Testes com webcam para identificação de pontos da face no método veloz."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#cam_capture.release()\n",
+    "    \n",
+    "cam_capture = cv2.VideoCapture(0)\n",
+    "cv2.destroyAllWindows()\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        image_frame = annotate_landmarks_image_fast(image_frame)\n",
+    "        cv2.imshow(\"Detector de Rostos\", image_frame)\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Troca de rostos. Inicalmente utilizamos os marcadores da face para recortar adequadamente os rotos e posteriormente implantamos em outra imagem, aplicando suavizações em suas bordas."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "import cv2\n",
+    "import dlib\n",
+    "import numpy\n",
+    "from time import sleep\n",
+    "import sys\n",
+    "\n",
+    "SCALE_FACTOR = 1 \n",
+    "FEATHER_AMOUNT = 11\n",
+    "\n",
+    "FACE_POINTS = list(range(17, 68))\n",
+    "MOUTH_POINTS = list(range(48, 61))\n",
+    "RIGHT_BROW_POINTS = list(range(17, 22))\n",
+    "LEFT_BROW_POINTS = list(range(22, 27))\n",
+    "RIGHT_EYE_POINTS = list(range(36, 42))\n",
+    "LEFT_EYE_POINTS = list(range(42, 48))\n",
+    "NOSE_POINTS = list(range(27, 35))\n",
+    "JAW_POINTS = list(range(0, 17))\n",
+    "\n",
+    "# Points used to line up the images.\n",
+    "ALIGN_POINTS = (LEFT_BROW_POINTS + RIGHT_EYE_POINTS + LEFT_EYE_POINTS +\n",
+    "                               RIGHT_BROW_POINTS + NOSE_POINTS + MOUTH_POINTS)\n",
+    "\n",
+    "# Points from the second image to overlay on the first. The convex hull of each\n",
+    "# element will be overlaid.\n",
+    "OVERLAY_POINTS = [\n",
+    "    LEFT_EYE_POINTS + RIGHT_EYE_POINTS + LEFT_BROW_POINTS + RIGHT_BROW_POINTS,\n",
+    "    NOSE_POINTS + MOUTH_POINTS,\n",
+    "]\n",
+    "\n",
+    "# Amount of blur to use during colour correction, as a fraction of the\n",
+    "# pupillary distance.\n",
+    "COLOUR_CORRECT_BLUR_FRAC = 0.6\n",
+    "\n",
+    "detector = dlib.get_frontal_face_detector()\n",
+    "predictor = dlib.shape_predictor(predictor_68_path)\n",
+    "\n",
+    "def get_landmarks(im):\n",
+    "    # Returns facial landmarks as (x,y) coordinates\n",
+    "    rects = detector(im, 1)\n",
+    "    \n",
+    "    if len(rects) > 1:\n",
+    "        return im\n",
+    "    if len(rects) == 0:\n",
+    "        return im\n",
+    "\n",
+    "    return numpy.matrix([[p.x, p.y] for p in predictor(im, rects[0]).parts()])\n",
+    "\n",
+    "\n",
+    "def annotate_landmarks(im, landmarks):\n",
+    "    #Overlays the landmark points on the image itself\n",
+    "    \n",
+    "    im = im.copy()\n",
+    "    for idx, point in enumerate(landmarks):\n",
+    "        pos = (point[0, 0], point[0, 1])\n",
+    "        cv2.putText(im, str(idx), pos,\n",
+    "                    fontFace=cv2.FONT_HERSHEY_SCRIPT_SIMPLEX,\n",
+    "                    fontScale=0.4,\n",
+    "                    color=(0, 0, 255))\n",
+    "        cv2.circle(im, pos, 3, color=(0, 255, 255))\n",
+    "    return im\n",
+    "\n",
+    "def draw_convex_hull(im, points, color):\n",
+    "    points = cv2.convexHull(points)\n",
+    "    cv2.fillConvexPoly(im, points, color=color)\n",
+    "\n",
+    "def get_face_mask(im, landmarks):\n",
+    "    im = numpy.zeros(im.shape[:2], dtype=numpy.float64)\n",
+    "\n",
+    "    for group in OVERLAY_POINTS:\n",
+    "        draw_convex_hull(im,\n",
+    "                         landmarks[group],\n",
+    "                         color=1)\n",
+    "\n",
+    "    im = numpy.array([im, im, im]).transpose((1, 2, 0))\n",
+    "\n",
+    "    im = (cv2.GaussianBlur(im, (FEATHER_AMOUNT, FEATHER_AMOUNT), 0) > 0) * 1.0\n",
+    "    im = cv2.GaussianBlur(im, (FEATHER_AMOUNT, FEATHER_AMOUNT), 0)\n",
+    "\n",
+    "    return im\n",
+    "    \n",
+    "def transformation_from_points(points1, points2):\n",
+    "    \"\"\"\n",
+    "    Return an affine transformation [s * R | T] such that:\n",
+    "        sum ||s*R*p1,i + T - p2,i||^2\n",
+    "    is minimized.\n",
+    "    \"\"\"\n",
+    "    # Solve the procrustes problem by subtracting centroids, scaling by the\n",
+    "    # standard deviation, and then using the SVD to calculate the rotation. See\n",
+    "    # the following for more details:\n",
+    "    #   https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem\n",
+    "\n",
+    "    points1 = points1.astype(numpy.float64)\n",
+    "    points2 = points2.astype(numpy.float64)\n",
+    "\n",
+    "    c1 = numpy.mean(points1, axis=0)\n",
+    "    c2 = numpy.mean(points2, axis=0)\n",
+    "    points1 -= c1\n",
+    "    points2 -= c2\n",
+    "\n",
+    "    s1 = numpy.std(points1)\n",
+    "    s2 = numpy.std(points2)\n",
+    "    points1 /= s1\n",
+    "    points2 /= s2\n",
+    "\n",
+    "    U, S, Vt = numpy.linalg.svd(points1.T * points2)\n",
+    "\n",
+    "    # The R we seek is in fact the transpose of the one given by U * Vt. This\n",
+    "    # is because the above formulation assumes the matrix goes on the right\n",
+    "    # (with row vectors) where as our solution requires the matrix to be on the\n",
+    "    # left (with column vectors).\n",
+    "    R = (U * Vt).T\n",
+    "\n",
+    "    return numpy.vstack([numpy.hstack(((s2 / s1) * R,\n",
+    "                                       c2.T - (s2 / s1) * R * c1.T)),\n",
+    "                         numpy.matrix([0., 0., 1.])])\n",
+    "\n",
+    "def read_im_and_landmarks(image):\n",
+    "    im = image\n",
+    "    im = cv2.resize(im,None,fx=1, fy=1, interpolation = cv2.INTER_LINEAR)\n",
+    "    im = cv2.resize(im, (im.shape[1] * SCALE_FACTOR,\n",
+    "                         im.shape[0] * SCALE_FACTOR))\n",
+    "    s = get_landmarks(im)\n",
+    "\n",
+    "    return im, s\n",
+    "\n",
+    "def warp_im(im, M, dshape):\n",
+    "    output_im = numpy.zeros(dshape, dtype=im.dtype)\n",
+    "    cv2.warpAffine(im,\n",
+    "                   M[:2],\n",
+    "                   (dshape[1], dshape[0]),\n",
+    "                   dst=output_im,\n",
+    "                   borderMode=cv2.BORDER_TRANSPARENT,\n",
+    "                   flags=cv2.WARP_INVERSE_MAP)\n",
+    "    return output_im\n",
+    "\n",
+    "def correct_colours(im1, im2, landmarks1):\n",
+    "    blur_amount = COLOUR_CORRECT_BLUR_FRAC * numpy.linalg.norm(\n",
+    "                              numpy.mean(landmarks1[LEFT_EYE_POINTS], axis=0) -\n",
+    "                              numpy.mean(landmarks1[RIGHT_EYE_POINTS], axis=0))\n",
+    "    blur_amount = int(blur_amount)\n",
+    "    if blur_amount % 2 == 0:\n",
+    "        blur_amount += 1\n",
+    "    im1_blur = cv2.GaussianBlur(im1, (blur_amount, blur_amount), 0)\n",
+    "    im2_blur = cv2.GaussianBlur(im2, (blur_amount, blur_amount), 0)\n",
+    "\n",
+    "    # Avoid divide-by-zero errors.\n",
+    "    im2_blur += (128 * (im2_blur <= 1.0)).astype(im2_blur.dtype)\n",
+    "\n",
+    "    return (im2.astype(numpy.float64) * im1_blur.astype(numpy.float64) /\n",
+    "                                                im2_blur.astype(numpy.float64))\n",
+    "\n",
+    "def swappy(image1, image2):\n",
+    "       \n",
+    "    im1, landmarks1 = read_im_and_landmarks(image1)\n",
+    "    im2, landmarks2 = read_im_and_landmarks(image2)\n",
+    "\n",
+    "    M = transformation_from_points(landmarks1[ALIGN_POINTS],\n",
+    "                                   landmarks2[ALIGN_POINTS])\n",
+    "    \n",
+    "    mask = get_face_mask(im2, landmarks2)\n",
+    "    warped_mask = warp_im(mask, M, im1.shape)\n",
+    "    combined_mask = numpy.max([get_face_mask(im1, landmarks1), warped_mask],\n",
+    "                              axis=0)\n",
+    "\n",
+    "    warped_im2 = warp_im(im2, M, im1.shape)\n",
+    "    warped_corrected_im2 = correct_colours(im1, warped_im2, landmarks1)\n",
+    "\n",
+    "    output_im = im1 * (1.0 - combined_mask) + warped_corrected_im2 * combined_mask\n",
+    "    cv2.imwrite('output.jpg', output_im)\n",
+    "    image = cv2.imread('output.jpg')\n",
+    "    return image\n",
+    "   \n",
+    "\n",
+    "## Enter the paths to your input images here    \n",
+    "image1 = cv2.imread('imagens/fausto.png')\n",
+    "image2 = cv2.imread('imagens/silvio.jpg')\n",
+    "\n",
+    "swapped = swappy(image1, image2)\n",
+    "cv2.imshow('Face Swap 1', swapped)\n",
+    "\n",
+    "swapped = swappy(image2, image1)\n",
+    "cv2.imshow('Face Swap 2', swapped)\n",
+    "\n",
+    "cv2.waitKey(0)\n",
+    "\n",
+    "cv2.destroyAllWindows()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "cam_capture.release()\n",
+    "    \n",
+    "cam_capture = cv2.VideoCapture(0)\n",
+    "cv2.destroyAllWindows()\n",
+    "\n",
+    "while True:\n",
+    "    ret, image_frame = cam_capture.read()\n",
+    "    \n",
+    "    if ret:\n",
+    "        #image_frame = cv2.resize(image_frame, None, fx=0.75, fy=0.75, interpolation = cv2.INTER_LINEAR)\n",
+    "        #image_frame = swappy(image2, image_frame)\n",
+    "        image_frame = swappy(image_frame, image2)\n",
+    "        cv2.imshow(\"Detector de Rostos\", image_frame)\n",
+    "        if cv2.waitKey(1) == 13:\n",
+    "            break\n",
+    "    else:\n",
+    "        break\n",
+    "        \n",
+    "cam_capture.release()\n",
+    "cv2.destroyAllWindows()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
