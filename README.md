@@ -47,27 +47,19 @@ Metodologias e técnicas para lidar com detectores de objetos e identificação 
 4. Contornos
 5. Identificação de Formas
 
-### Aula 4 - Detecção de objetos
-
-1. Correspondência de formas
-2. Descritores de características
-3. Features from Accelerated Segment Test (FAST)
-4. Binary Robust Independent Elementary Features (BRIEF)
-5. Oriented FAST and Rotated BRIEF (ORB)
-
-### Aula 5 - Classificação de objetos
+### Aula 4 - Classificação de objetos
 
 1. Classificadores em cascata de Haar
 2. Classificador facial DLib
 3. Análise Facial
 4. Marcos Faciais
 
-### Aula 6 - Machine learning e deep learning
+### Aula 5 - Machine learning e deep learning
 
 1. Reconhecimento de faces
-2. Reconhecimento de caracteres utilizando redes neurais profundas
+2. Reconhecimento de imagens utilizando redes neurais profundas
 3. Técnicas de transferência de aprendizado (*transfer learning*)
-4. YOLO *You Only See Once*.
+4. Reconhecimento de objetos em tempo real com YOLO *You Only See Once*.
 
 ## Dúvidas?
 
