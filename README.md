@@ -14,6 +14,8 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 1 - Introdução
 
+[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
+
 Introdução sobre visão computacional e principais ferramentas para compreensão da formação de imagens.
 
 1. Introdução do OpenCV
@@ -24,6 +26,8 @@ Introdução sobre visão computacional e principais ferramentas para compreens�
 6. Construção de imagens
 
 ### Aula 2 - Manipulação de imagens
+
+[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens.ipynb)
 
 Principais operações para manipulação e transformação de imagens.
 
@@ -37,6 +41,8 @@ Principais operações para manipulação e transformação de imagens.
 
 ### Aula 3 - Segmentação de imagens
 
+[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
+
 Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens.
 Metodologias e técnicas para lidar com detectores de objetos e identificação de rostos.
 
@@ -49,12 +55,16 @@ Metodologias e técnicas para lidar com detectores de objetos e identificação 
 
 ### Aula 4 - Classificação de objetos
 
+[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
+
 1. Classificadores em cascata de Haar
 2. Classificador facial DLib
 3. Análise Facial
 4. Marcos Faciais
 
 ### Aula 5 - Machine learning e deep learning
+
+[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-tracking-machine-learning/machine-learning.ipynb)
 
 1. Reconhecimento de faces
 2. Reconhecimento de imagens utilizando redes neurais profundas
