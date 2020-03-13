@@ -1,3 +1,9 @@
+https://img.shields.io/github/repo-size/michelpf/fiap-ml-visao-computacional?style=for-the-badge
+https://img.shields.io/github/issues/michelpf/fiap-ml-visao-computacional?style=for-the-badge
+https://img.shields.io/github/stars/michelpf/fiap-ml-visao-computacional?style=for-the-badge
+https://img.shields.io/github/watchers/michelpf/fiap-ml-visao-computacional?style=for-the-badge
+https://img.shields.io/github/commit-activity/w/michelpf/fiap-ml-visao-computacional?style=for-the-badge
+
 # FIAP MBA em Machine Learning e Inteligência Artificial
 
 ![alt text](https://github.com/michelpf/fiap-ml-tec-proc-imagens/blob/master/aula-6-tracking-machine-learning/imagens/spacecup_inf_readme.png)
@@ -11,6 +17,17 @@ Para instalar, acesse a sessão de [Downloads](https://www.anaconda.com/download
 Pacotes que necessitarão de instalações adicionais serão indicadas em cada notebook das aulas.
 
 > Atenção, veja [esta](https://github.com/michelpf/fiap-ml-tec-proc-imagens/blob/master/videos-camera-mac-windows.ipynb) rápida introdução do uso do OpenCV em MacOS e Windows. Guarde esse pequeno guia para futuros usos, pois no MacOS as coisas funcionam um pouco diferente do Windows e costumam travar (ex. ```cv2.destroyAllWindows()```)
+
+### Pacotes utilizados
+
+* [OpenCV](https://opencv.org/) 3.4.3 (```conda install -c conda-forge opencv==3.4.3```)
+* [Keras](https://keras.io/) 2.3.1 (```conda install keras==2.3.1```)
+* [Matplotlib](https://matplotlib.org/) 3.1.3 (```conda install matplotlib==3.1.3```)
+* [Seaborn](https://seaborn.pydata.org/) 0.0.10 (```conda install -c conda-forge seaborn==0.10.0```)
+* [Imutils](https://pypi.org/project/imutils/) 0.5.3 (```conda install -c conda-forge imutils==0.5.3```)
+* [Scikit Learn](https://scikit-learn.org/stable/) 0.22.1 (```conda install scikit-learn==0.22.1```)
+* [Scipy](https://www.scipy.org/) 1.4.1 (```conda install scipy==1.4.1```)
+* [Pytorch](https://pytorch.org/) 1.4.0 (```conda install -c pytorch pytorch==1.4.0```)
 
 ### Aula 1 - Introdução
 
