@@ -9,7 +9,7 @@
 
 ![alt text](https://github.com/michelpf/fiap-ml-tec-proc-imagens/blob/master/aula-6-tracking-machine-learning/imagens/spacecup_inf_readme.png)
 
-## Tecnologia e Processamento de Imagens
+## Visão Computacional
 
 Nas aulas utilizaremos a distribuição Ananconda, com uso intensivo do Jupyter Notebook, que há vem instalado nesta distribuição.
 
@@ -17,7 +17,7 @@ Para instalar, acesse a sessão de [Downloads](https://www.anaconda.com/download
 
 Pacotes que necessitarão de instalações adicionais serão indicadas em cada notebook das aulas.
 
-> Atenção, veja [esta](https://github.com/michelpf/fiap-ml-tec-proc-imagens/blob/master/videos-camera-mac-windows.ipynb) rápida introdução do uso do OpenCV em MacOS e Windows. Guarde esse pequeno guia para futuros usos, pois no MacOS as coisas funcionam um pouco diferente do Windows e costumam travar (ex. ```cv2.destroyAllWindows()```)
+> 🎥 Atenção: veja [esta](https://github.com/michelpf/fiap-ml-tec-proc-imagens/blob/master/videos-camera-mac-windows.ipynb) rápida introdução do uso do OpenCV em MacOS e Windows. Guarde esse pequeno guia para futuros usos, pois no MacOS as coisas funcionam um pouco diferente do Windows e costumam travar (ex. ```cv2.destroyAllWindows()```)
 
 ### Pacotes utilizados
 
@@ -32,9 +32,9 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 1 - Introdução
 
-[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
+📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
 
-Introdução sobre visão computacional e principais ferramentas para compreensão da formação de imagens.
+⛺️ Introdução sobre visão computacional e processamento de imagens
 
 1. Introdução do OpenCV
 2. Instalação
@@ -45,9 +45,9 @@ Introdução sobre visão computacional e principais ferramentas para compreens�
 
 ### Aula 2 - Manipulação de imagens
 
-[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens.ipynb)
+📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens.ipynb)
 
-Principais operações para manipulação e transformação de imagens.
+🔬 Manipulação e transformação de imagens.
 
 1. Transformações
 2. Translações
@@ -59,10 +59,9 @@ Principais operações para manipulação e transformação de imagens.
 
 ### Aula 3 - Segmentação de imagens
 
-[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
+📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
 
-Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens.
-Metodologias e técnicas para lidar com detectores de objetos e identificação de rostos.
+✂️ Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens
 
 1. Aguçamento
 2. Binarização
@@ -73,7 +72,9 @@ Metodologias e técnicas para lidar com detectores de objetos e identificação 
 
 ### Aula 4 - Classificação de objetos
 
-[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
+📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
+
+👦 Classificadores de objetos e análise facial
 
 1. Classificadores em cascata de Haar
 2. Classificador facial DLib
@@ -82,7 +83,13 @@ Metodologias e técnicas para lidar com detectores de objetos e identificação 
 
 ### Aula 5 - Machine learning e deep learning
 
-[Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-tracking-machine-learning/machine-learning.ipynb)
+📙 [Notebook reconhecimento facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning.ipynb)
+📙 [Notebook face média](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/face-media-alunos.ipynb)
+📙 [Notebook OCR & captcha](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning.ipynb)
+📙 [Notebook transfer learning](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-fruits.ipynb)
+📙 [Notebook Reconhecimento de objetos em tempo real](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/yolo-realtime.ipynb)
+
+👾 Deep learning e transfer learning aplicado a visão computacional
 
 1. Reconhecimento de faces
 2. Reconhecimento de imagens utilizando redes neurais profundas
