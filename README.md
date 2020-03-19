@@ -85,8 +85,6 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 📙 [Notebook reconhecimento facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning.ipynb)
 
-📙 [Notebook face média](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/face-media-alunos.ipynb)
-
 📙 [Notebook OCR & captcha](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning.ipynb)
 
 📙 [Notebook transfer learning](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-fruits.ipynb)
