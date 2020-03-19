@@ -91,7 +91,7 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 📙 [Notebook Reconhecimento de objetos em tempo real](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/yolo-realtime.ipynb)
 
-**Google Collab notebooks**
+**Google Colab notebooks**
 
 📕 Notebook reconhecimento facial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
 
