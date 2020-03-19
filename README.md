@@ -95,7 +95,9 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 **Google Collab notebooks**
 
-📕 Notebook reconhecimento facial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-collab.ipynb)
+📕 Notebook reconhecimento facial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
+
+📕 Notebook transfer learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-colab.ipynb)
 
 👾 Deep learning e transfer learning aplicado a visão computacional
 
