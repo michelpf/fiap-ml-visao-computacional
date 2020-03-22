@@ -105,6 +105,11 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ✅ Notebook desafio 1 (solução): reconhecimento de faces [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-1/desafio-1-solucao-colab.ipynb)
 
+🚩 Notebook desafio 2: detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-2/desafio-2-colab.ipynb)
+
+✅ Notebook desafio 2 (solução): detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-2/desafio-2-solucao-colab.ipynb)
+
+
 👾 Deep learning e transfer learning aplicado a visão computacional
 
 1. Reconhecimento de faces
