@@ -99,6 +99,11 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 📕 Notebook transfer learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-fruits-colab.ipynb)
 
+**Desafios**
+
+🚩 Notebook desafio 1: reconhecimento de faces [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-1/desafio-1.ipynb)
+✅ Notebook desafio 1 (solução): reconhecimento de faces [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-1/desafio-1-solucao.ipynb)
+
 👾 Deep learning e transfer learning aplicado a visão computacional
 
 1. Reconhecimento de faces
