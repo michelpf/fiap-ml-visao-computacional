@@ -32,12 +32,6 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 1 - Introdução
 
-📙 [Notebook introdução](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
-
-**Google Colab notebooks**
-
-📕 Notebook introdução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/ula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
-
 ⛺️ Introdução sobre visão computacional e processamento de imagens
 
 1. Introdução do OpenCV
@@ -46,6 +40,10 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 4. Representação de cores
 5. Histograma
 6. Construção de imagens
+
+📙 [Notebook introdução](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
+
+📕 Notebook introdução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
 
 ### Aula 2 - Manipulação de imagens
 
