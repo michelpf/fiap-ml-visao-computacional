@@ -32,7 +32,11 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 1 - Introdução
 
-📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
+📙 [Notebook introdução](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
+
+**Google Colab notebooks**
+
+📕 Notebook introdução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/ula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
 
 ⛺️ Introdução sobre visão computacional e processamento de imagens
 
@@ -93,7 +97,7 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 **Google Colab notebooks**
 
-📕 Notebook reconhecimento facial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
+📕 Notebook reconhecimento facial e detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
 
 📕 Notebook Deep learning aplicado a OCR & captcha [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/deep-learning-captcha-colab.ipynb)
 
