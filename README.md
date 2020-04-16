@@ -47,7 +47,9 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 2 - Manipulação de imagens
 
-📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens.ipynb)
+📙 [Notebook manipulação e transformação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens.ipynb)
+
+📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens-colab.ipynb)
 
 🔬 Manipulação e transformação de imagens.
 
