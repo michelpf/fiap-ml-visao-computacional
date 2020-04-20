@@ -30,11 +30,12 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 * [Scipy](https://www.scipy.org/) 1.4.1 (```conda install scipy==1.4.1```)
 * [Pytorch](https://pytorch.org/) 1.4.0 (```conda install -c pytorch pytorch==1.4.0```)
 
+_No Google Colab todas as dependências já estão instaladas._ 😄
 ### Aula 1 - Introdução
 
-📙 [Notebook introdução](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
+📙 [Notebook manipulação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
 
-📕 Notebook introdução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
+📕 Notebook manipulação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
 
 ⛺️ Introdução sobre visão computacional e processamento de imagens
 
@@ -90,7 +91,7 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 3 - Segmentação de imagens
 
-📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
+📙 [Notebook manipulação e transformação de imagens] (https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
 
 📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao-colab.ipynb)
 
@@ -115,7 +116,7 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 4 - Classificação de objetos
 
-📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
+📙 [Notebook classificação de objetos e análise facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
 
 👦 Classificadores de objetos e análise facial
 
