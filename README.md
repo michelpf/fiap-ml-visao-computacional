@@ -32,6 +32,10 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ### Aula 1 - Introdução
 
+📙 [Notebook introdução](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
+
+📕 Notebook introdução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
+
 ⛺️ Introdução sobre visão computacional e processamento de imagens
 
 1. Introdução do OpenCV
@@ -40,10 +44,6 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 4. Representação de cores
 5. Histograma
 6. Construção de imagens
-
-📙 [Notebook introdução](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
-
-📕 Notebook introdução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
 
 **Desafios**
 
@@ -61,6 +61,18 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens-colab.ipynb)
 
+
+🔬 Manipulação e transformação de imagens.
+
+1. Transformações
+2. Translações
+3. Rotações
+4. Resizing
+5. Cropping
+6. Masking
+7. Suavização
+
+
 **Desafios**
 
 🚩 Notebook desafio 1: transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-1/desafio-1-colab.ipynb)
@@ -75,21 +87,21 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 ✅ Notebook desafio 3 (solução): pipeline machine learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-1/desafio-3-solucao-colab.ipynb)
 
-🔬 Manipulação e transformação de imagens.
-
-1. Transformações
-2. Translações
-3. Rotações
-4. Resizing
-5. Cropping
-6. Masking
-7. Suavização
 
 ### Aula 3 - Segmentação de imagens
 
 📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
 
 📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao-colab.ipynb)
+
+✂️ Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens
+
+1. Aguçamento
+2. Binarização
+3. Dilatação e Erosão
+4. Deteção de Borda
+4. Contornos
+5. Identificação de Formas
 
 **Desafios**
 
@@ -100,15 +112,6 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 🚩 Notebook desafio 2: limpeza de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/desafio-1/desafio-2-colab.ipynb)
 
 ✅ Notebook desafio 2 (solução): limpeza de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/desafio-1/desafio-2-solucao-colab.ipynb)
-
-✂️ Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens
-
-1. Aguçamento
-2. Binarização
-3. Dilatação e Erosão
-4. Deteção de Borda
-4. Contornos
-5. Identificação de Formas
 
 ### Aula 4 - Classificação de objetos
 
