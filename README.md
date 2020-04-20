@@ -64,6 +64,7 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 ### Aula 3 - Segmentação de imagens
 
 📙 [Notebook](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
+📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao-colab.ipynb)
 
 ✂️ Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens
 
