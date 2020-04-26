@@ -118,6 +118,8 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 📙 [Notebook classificação de objetos e análise facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
 
+📕 Notebook classificação de objetos e análise facial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos-colab.ipynb)
+
 👦 Classificadores de objetos e análise facial
 
 1. Classificadores em cascata de Haar
