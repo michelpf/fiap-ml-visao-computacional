@@ -91,7 +91,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 ### Aula 3 - Segmentação de imagens
 
-📙 [Notebook manipulação e transformação de imagens] (https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
+📙 [Notebook manipulação e transformação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
 
 📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao-colab.ipynb)
 
@@ -117,6 +117,8 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 ### Aula 4 - Classificação de objetos
 
 📙 [Notebook classificação de objetos e análise facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
+
+📕 Notebook classificação de objetos e análise facial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos-colab.ipynb)
 
 👦 Classificadores de objetos e análise facial
 
