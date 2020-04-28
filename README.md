@@ -127,6 +127,16 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 3. Análise Facial
 4. Marcos Faciais
 
+**Desafios**
+
+🚩 Notebook desafio 1: transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-1/desafio-1-colab.ipynb)
+
+✅ Notebook desafio 1 (solução): transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-1/desafio-1-solucao-colab.ipynb)
+
+🚩 Notebook desafio 2: transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-2/desafio-2-colab.ipynb)
+
+✅ Notebook desafio 2 (solução): transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-2/desafio-2-solucao-colab.ipynb)
+
 ### Aula 5 - Machine learning e deep learning
 
 📙 [Notebook reconhecimento facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning.ipynb)
@@ -145,6 +155,13 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 📕 Notebook transfer learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-fruits-colab.ipynb)
 
+👾 Deep learning e transfer learning aplicado a visão computacional
+
+1. Reconhecimento de faces
+2. Reconhecimento de imagens utilizando redes neurais profundas
+3. Técnicas de transferência de aprendizado (*transfer learning*)
+4. Reconhecimento de objetos em tempo real com YOLO *You Only See Once*.
+
 **Desafios**
 
 🚩 Notebook desafio 1: reconhecimento de faces [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-1/desafio-1-colab.ipynb)
@@ -154,14 +171,6 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 🚩 Notebook desafio 2: detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-2/desafio-2-colab.ipynb)
 
 ✅ Notebook desafio 2 (solução): detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-2/desafio-2-solucao-colab.ipynb)
-
-
-👾 Deep learning e transfer learning aplicado a visão computacional
-
-1. Reconhecimento de faces
-2. Reconhecimento de imagens utilizando redes neurais profundas
-3. Técnicas de transferência de aprendizado (*transfer learning*)
-4. Reconhecimento de objetos em tempo real com YOLO *You Only See Once*.
 
 ## Dúvidas?
 
