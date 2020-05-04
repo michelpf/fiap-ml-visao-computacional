@@ -32,6 +32,7 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 
 _No Google Colab todas as dependências já estão instaladas._ 😄
 
+
 ### Aula 1 - Introdução
 
 📙 [Notebook manipulação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
@@ -57,6 +58,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 ✅ Notebook desafio 2 (solução): edição de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-1/desafio-2-solucao-colab.ipynb)
 
+
 ### Aula 2 - Manipulação de imagens
 
 📙 [Notebook manipulação e transformação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens.ipynb)
@@ -74,7 +76,6 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 6. Masking
 7. Suavização
 
-
 **Desafios**
 
 🚩 Notebook desafio 1: transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-1/desafio-1-colab.ipynb)
@@ -88,6 +89,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 🚩 Notebook desafio 3: pipeline machine learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-3/desafio-3-colab.ipynb)
 
 ✅ Notebook desafio 3 (solução): pipeline machine learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-3/desafio-3-solucao-colab.ipynb)
+
 
 ### Aula 3 - Segmentação de imagens
 
@@ -114,6 +116,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 ✅ Notebook desafio 2 (solução): limpeza de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/desafio-2/desafio-2-solucao-colab.ipynb)
 
+
 ### Aula 4 - Classificação de objetos
 
 📙 [Notebook classificação de objetos e análise facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
@@ -136,6 +139,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 🚩 Notebook desafio 2: transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-2/desafio-2-colab.ipynb)
 
 ✅ Notebook desafio 2 (solução): transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-2/desafio-2-solucao-colab.ipynb)
+
 
 ### Aula 5 - Machine learning e deep learning
 
