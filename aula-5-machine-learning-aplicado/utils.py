@@ -203,6 +203,7 @@ def plot_boxes(img, boxes, class_names, plot_labels, color = None):
     
     # Create a figure and plot the image
     fig, a = plt.subplots(1,1)
+    
     a.imshow(img)
     
     # Plot the bounding boxes and corresponding labels on top of the image
