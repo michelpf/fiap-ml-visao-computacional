@@ -149,11 +149,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 **Google Colab notebooks**
 
-📕 Notebook reconhecimento facial e detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
-
-📕 Notebook Deep learning aplicado a OCR & captcha [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/deep-learning-captcha-colab.ipynb)
-
-📕 Notebook transfer learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-fruits-colab.ipynb)
+📕 Notebook reconhecimento facial, deep learning aplicado a OCR, transfer learning e detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
 
 👾 Deep learning e transfer learning aplicado a visão computacional
 
