@@ -31,6 +31,7 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 * [Pytorch](https://pytorch.org/) 1.4.0 (```conda install -c pytorch pytorch==1.4.0```)
 
 _No Google Colab todas as dependências já estão instaladas._ 😄
+
 ### Aula 1 - Introdução
 
 📙 [Notebook manipulação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
@@ -87,7 +88,6 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 🚩 Notebook desafio 3: pipeline machine learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-3/desafio-3-colab.ipynb)
 
 ✅ Notebook desafio 3 (solução): pipeline machine learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-3/desafio-3-solucao-colab.ipynb)
-
 
 ### Aula 3 - Segmentação de imagens
 
@@ -146,8 +146,6 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 📙 [Notebook transfer learning](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-fruits.ipynb)
 
 📙 [Notebook Reconhecimento de objetos em tempo real](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/yolo-realtime.ipynb)
-
-**Google Colab notebooks**
 
 📕 Notebook reconhecimento facial, deep learning aplicado a OCR, transfer learning e detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
 
