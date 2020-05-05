@@ -31,13 +31,16 @@ Pacotes que necessitarão de instalações adicionais serão indicadas em cada n
 * [Pytorch](https://pytorch.org/) 1.4.0 (```conda install -c pytorch pytorch==1.4.0```)
 
 _No Google Colab todas as dependências já estão instaladas._ 😄
-### Aula 1 - Introdução
+
+Aulas no programa atualizado da disciplina:
+
+## 1. Introdução a Visão Computacional
 
 📙 [Notebook manipulação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional.ipynb)
 
 📕 Notebook manipulação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/introducao-visao-computacional-colab.ipynb)
 
-⛺️ Introdução sobre visão computacional e processamento de imagens
+### 1.1 Introdução sobre visão computacional e processamento de imagens ⛺️
 
 1. Introdução do OpenCV
 2. Instalação
@@ -46,7 +49,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 5. Histograma
 6. Construção de imagens
 
-**Desafios**
+### 1.2 Desafios
 
 🚩 Notebook desafio 1: identificação de cores [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-1/desafio-1-colab.ipynb)
 
@@ -56,14 +59,15 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 ✅ Notebook desafio 2 (solução): edição de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-1/desafio-2-solucao-colab.ipynb)
 
-### Aula 2 - Manipulação de imagens
+
+## 2. Manipulação de imagens
 
 📙 [Notebook manipulação e transformação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens.ipynb)
 
 📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/transformacao-imagens-colab.ipynb)
 
 
-🔬 Manipulação e transformação de imagens.
+### 2.1 Manipulação e transformação de imagens 🔬
 
 1. Transformações
 2. Translações
@@ -73,8 +77,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 6. Masking
 7. Suavização
 
-
-**Desafios**
+### 2.2 Desafios
 
 🚩 Notebook desafio 1: transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-1/desafio-1-colab.ipynb)
 
@@ -89,13 +92,13 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 ✅ Notebook desafio 3 (solução): pipeline machine learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-2-transformacao/desafio-3/desafio-3-solucao-colab.ipynb)
 
 
-### Aula 3 - Segmentação de imagens
+## 3. Segmentação de imagens
 
 📙 [Notebook manipulação e transformação de imagens](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao.ipynb)
 
 📕 Notebook manipulação e transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/segmentacao-colab.ipynb)
 
-✂️ Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens
+### 3.1 Técnicas para segmentar e extrair artefatos e regiões de interesse de imagens ✂️
 
 1. Aguçamento
 2. Binarização
@@ -104,7 +107,7 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 4. Contornos
 5. Identificação de Formas
 
-**Desafios**
+### 3.2 Desafios
 
 🚩 Notebook desafio 1: contornos em imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/desafio-1/desafio-1-colab.ipynb)
 
@@ -114,20 +117,21 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 ✅ Notebook desafio 2 (solução): limpeza de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-3-segmentacao/desafio-2/desafio-2-solucao-colab.ipynb)
 
-### Aula 4 - Classificação de objetos
+
+## 4. Classificação de objetos e análise facial
 
 📙 [Notebook classificação de objetos e análise facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
 
 📕 Notebook classificação de objetos e análise facial [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos-colab.ipynb)
 
-👦 Classificadores de objetos e análise facial
+### 4.1 Classificadores de objetos e análise facial 👦
 
 1. Classificadores em cascata de Haar
 2. Classificador facial DLib
 3. Análise Facial
 4. Marcos Faciais
 
-**Desafios**
+### 4.2 Desafios
 
 🚩 Notebook desafio 1: transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-1/desafio-1-colab.ipynb)
 
@@ -137,7 +141,8 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 ✅ Notebook desafio 2 (solução): transformação de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-2/desafio-2-solucao-colab.ipynb)
 
-### Aula 5 - Machine learning e deep learning
+
+## 5. Machine learning, deep learning e transfer learning aplicado a imagens
 
 📙 [Notebook reconhecimento facial](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning.ipynb)
 
@@ -147,22 +152,16 @@ _No Google Colab todas as dependências já estão instaladas._ 😄
 
 📙 [Notebook Reconhecimento de objetos em tempo real](https://github.com/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/yolo-realtime.ipynb)
 
-**Google Colab notebooks**
+📕 Notebook reconhecimento facial, deep learning aplicado a OCR, transfer learning e detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
 
-📕 Notebook reconhecimento facial e detecção de objetos [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/machine-learning-colab.ipynb)
-
-📕 Notebook Deep learning aplicado a OCR & captcha [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/deep-learning-captcha-colab.ipynb)
-
-📕 Notebook transfer learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/transfer-learning-fruits-colab.ipynb)
-
-👾 Deep learning e transfer learning aplicado a visão computacional
+### 5.1 Deep learning e transfer learning aplicado a visão computacional 👾
 
 1. Reconhecimento de faces
 2. Reconhecimento de imagens utilizando redes neurais profundas
 3. Técnicas de transferência de aprendizado (*transfer learning*)
 4. Reconhecimento de objetos em tempo real com YOLO *You Only See Once*.
 
-**Desafios**
+### 5.2 Desafios
 
 🚩 Notebook desafio 1: reconhecimento de faces [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-1/desafio-1-colab.ipynb)
 
