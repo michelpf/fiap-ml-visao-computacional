@@ -55,9 +55,9 @@ Aulas no programa atualizado da disciplina:
 
 ✅ Notebook desafio 1 (solução): identificação de cores [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-1/desafio-1-solucao-colab.ipynb)
 
-🚩 Notebook desafio 2: edição de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-1/desafio-1-colab.ipynb)
+🚩 Notebook desafio 2: edição de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-2/desafio-2-colab.ipynb)
 
-✅ Notebook desafio 2 (solução): edição de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-1/desafio-2-solucao-colab.ipynb)
+✅ Notebook desafio 2 (solução): edição de imagens [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-1-introducao-visao-computacional/desafio-2/desafio-2-solucao-colab.ipynb)
 
 
 ## 2. Manipulação de imagens
