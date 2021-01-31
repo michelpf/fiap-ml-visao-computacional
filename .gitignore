@@ -2,10 +2,11 @@
 
 aula-5-machine-learning-aplicado/pesos/
 
+eingen-faces/fiap
+
 .ipynb_checkpoints
 *.weights
 **/.DS_Store
-
 
 
 # Byte-compiled / optimized / DLL files
