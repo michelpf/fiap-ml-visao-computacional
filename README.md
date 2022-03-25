@@ -132,7 +132,7 @@ Aulas no programa atualizado da disciplina:
 3. Análise Facial
 4. Alinhamento de faces
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/classificacao-objetos-analise-facial.ipynb)
 
 ### Desafios
 
@@ -167,7 +167,7 @@ Solução [![Open In Colab](https://colab.research.google.com/assets/colab-badge
 2. Transformadas de Rough
 3. Descritores de imagem ORB
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/extra/yolo-transfer-learning-descriptorsipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/extra/yolo-transfer-learning-descriptors.ipynb)
 
 ### Desafios
 
