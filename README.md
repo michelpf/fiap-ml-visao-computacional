@@ -153,7 +153,7 @@ Aulas no programa atualizado da disciplina:
 2. Técnicas de transferência de aprendizado (*transfer learning*)
 3. Reconhecimento de objetos com YOLO (You Only See Once).
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/reconhecimento-facial-deep-learning.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/reconhecimento-de-imagens-e-objetos.ipynb)
 
 ### Desafio
 
