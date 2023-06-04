@@ -147,12 +147,11 @@ Aulas no programa atualizado da disciplina:
 
 ## Machine learning, deep learning e transfer learning aplicado a imagens (Aula 5)
 
-### Deep learning e transfer learning aplicado a visão computacional
+### Reconhecimento de imagens e objetos
 
-1. Reconhecimento de faces
-2. Reconhecimento de imagens utilizando redes neurais profundas
-3. Técnicas de transferência de aprendizado (*transfer learning*)
-4. Reconhecimento de objetos em tempo real com YOLO *You Only See Once*.
+1. Reconhecimento de imagens utilizando redes neurais profundas
+2. Técnicas de transferência de aprendizado (*transfer learning*)
+3. Reconhecimento de objetos com YOLO (You Only See Once).
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/reconhecimento-facial-deep-learning.ipynb)
 
@@ -162,24 +161,6 @@ Aulas no programa atualizado da disciplina:
     
     Solução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-5-machine-learning-aplicado/desafio-1/desafio-1-solucao.ipynb)
 
-
-## Transfer learning com Yolo e descritores de imagens (Aula Extra)
-
-1. Treinamento de modelo customizado baseado em Yolo
-2. Transformadas de Rough
-3. Descritores de imagem ORB
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/extra/yolo-transfer-learning-descriptors.ipynb)
-
-### Desafios
-
-1. Detecção de Rodas [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/extra/desafio-1/desafio-1.ipynb)
-
-    Solução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/extra/desafio-1/desafio-1-solucao.ipynb)
-
-2. Reconhecimento de embalagem [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/extra/desafio-2/desafio-2.ipynb)
-
-    Solução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/extra/desafio-2/desafio-2-solucao.ipynb)
 
 ## Capstones
 
