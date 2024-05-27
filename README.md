@@ -145,7 +145,7 @@ Aulas no programa atualizado da disciplina:
     Solução [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michelpf/fiap-ml-visao-computacional/blob/master/aula-4-classificacao-objetos-analise-facial/desafio-2/desafio-2-solucao.ipynb)
 
 
-## Machine learning, deep learning e transfer learning aplicado a imagens (Aula 5)
+## Deep learning e transfer learning aplicado a imagens (Aula 5)
 
 ### Reconhecimento de imagens e objetos
 
