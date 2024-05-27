@@ -150,6 +150,8 @@ Aulas no programa atualizado da disciplina:
 ### Reconhecimento de imagens e objetos
 
 1. Reconhecimento de imagens utilizando redes neurais profundas
+    * Redes neurais convolucionais (CNN)
+    * Vision transformers (ViT)
 2. Técnicas de transferência de aprendizado (*transfer learning*)
 3. Reconhecimento de objetos com YOLO (You Only See Once).
 
